@@ -3,8 +3,8 @@
 
 /*cores*/
 :root {
-  --background: #2A2D43;
-  --box: #414361;
+  --background: #414361;
+  --box: #2A2D43;
   --white-color: #fafafa;
   --green-color: #00ff40;
   --prink-color: #FF79C6;
@@ -23,20 +23,18 @@ html {
 
 /*estilização body*/
 body {
-  background-color: var(--box);
   display: flex;
   flex-direction: column;
   justify-content: center;
   font-family: 'Roboto Mono', monospace, Helvetica, sans-serif;
+  background-color: var(--background);
 }
 
 .container {
   margin: 0 auto;
   margin-top: 100px;
   width: 90%;
-  max-width: 700px;
-  min-height: 200px;
-  padding: 20px 4%;
+  max-width: 600px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -56,31 +54,29 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 90%;
-  max-width: 700px;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 input, .btn-add {
   all: unset;
-  border: 1px solid var(--white-color);
+  box-shadow: inset 0 0 0 1px var(--white-color);
+  height: 50px;
 }
 
 input {
-  width: 90%;
-  max-width: 350px;
-  height: auto;
-  min-height: 50px;
+  width: 100%;
+  padding: 0 10px;
   border-radius: 10px 0 0 10px;
   font-size: 1.2rem;
   text-align: center;
-  background-color: var(--background);
+  background-color: var(--box);
   color: var(--white-color);
 }
 
 .btn-add {
-  max-width: 50px;
   width: 50px;
-  height: 50px;
+  padding: 0 10px;
   border-radius: 0 10px 10px 0;
   text-align: center;
   cursor: pointer;
@@ -92,19 +88,75 @@ input {
   background-color: var(--green-color);
 }
 
+/*ul e li*/
+.message {
+  font-size: 1.125rem;
+}
+
+.tasks-ul {
+  width: 100%;
+  margin-top: 30px;
+  list-style: none;
+}
+
+.task-li {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  color: var(--white-color);
+  background-color: var(--box);
+}
+
+.task-li span {
+  flex: 2;
+  font-size: 1.125rem;
+  margin: 0 20px;
+  word-break: break-all;
+}
+
+.btn-complete, .btn-remove {
+  all: unset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+  border-radius: 6px;
+  background-color: var(--white-color);
+  cursor: pointer;
+  font-size: 2rem;
+  color: var(--box);
+}
+
+.btn-complete:hover {
+  background-color: var(--green-color);
+}
+
+.btn-remove:hover {
+  background-color: var(--prink-color);
+}
+
+.completed {
+  opacity: 0.6;
+}
+
+.completed span{
+  text-decoration: line-through;
+}
+
 /*responsividade*/
 @media (max-width: 768px) {
   .container {
-    margin-top: 80px;
-    padding: 20px 2%;
-  }
+    max-width: 400px;
+  } 
 
   h1 {
     font-size: 1.75rem;
-  }
-  
-  input {
-    font-size: 1rem;
+    margin-top: 60px;
   }
 }
 
@@ -116,5 +168,20 @@ input {
   h1 {
     font-size: 1.5rem;
   }
-}
 
+  input {
+    font-size: 1rem;
+  }
+
+  .task-li span {
+    font-size: 1rem;
+  }  
+
+  .btn-complete, .btn-remove {
+    font-size: 1.25rem;
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+    border-radius: 4px;
+  }
+}

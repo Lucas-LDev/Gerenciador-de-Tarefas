@@ -1,5 +1,7 @@
 function addTask() {
-    let message = "Tarefa adicionada";
+    //capturando a caixa da message
+    let message = document.getElementById("message");
+    message.textContent = "Tarefa adicionada";
 
     //capturando input da task
     let taskInput = document.getElementById("task-input");
@@ -7,7 +9,9 @@ function addTask() {
 
     //verificação de tarefa vazia
     if (!task) {
-        message = "A tarefa não pode ser nula";
+        message.textContent = "A tarefa não pode ser nula";
+        //trocando a cor do texto para rosa
+        message.style.color = "#FF79C6";
     } else {
         //pegando a ul(lista de tarefas)
         let ul = document.getElementById("tasks-ul");
@@ -18,7 +22,7 @@ function addTask() {
 
         //criando o span para o texto da tarefa
         let taskSpan = document.createElement("span");
-        taskSpan.textContent = task;
+        taskSpan.textContent = task[0].toUpperCase() + task.slice(1);
 
         //criando o botão de concluir tarefa
         let btnComplete = document.createElement("button");
@@ -45,10 +49,10 @@ function addTask() {
         li.appendChild(btnRemove);
         //adicionando o li na ul
         ul.appendChild(li);
-    }
 
-    //printando mensagem ao tentar adicionar uma tarefa
-    document.getElementById("message").textContent = message;
+        //trocando cor do texto para verde
+        message.style.color = "#00ff40";
+    }
     //limpando o input ao adicionar uma tarefa
     taskInput.value = "";
 }
