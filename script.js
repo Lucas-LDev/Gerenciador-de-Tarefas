@@ -56,3 +56,10 @@ function addTask() {
     //limpando o input ao adicionar uma tarefa
     taskInput.value = "";
 }
+
+
+function addTaskWithEnter(event) {
+    if (event.key === "Enter") {
+        addTask();
+    }
+}
