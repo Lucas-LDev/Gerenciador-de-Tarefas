@@ -1,3 +1,4 @@
+//função de adicionar tarefas na ul
 function addTask() {
     //capturando a caixa da message
     let message = document.getElementById("message");
@@ -12,6 +13,7 @@ function addTask() {
         message.textContent = "A tarefa não pode ser nula";
         //trocando a cor do texto para rosa
         message.style.color = "#FF79C6";
+        showMessage();
     } else {
         //pegando a ul(lista de tarefas)
         let ul = document.getElementById("tasks-ul");
@@ -52,14 +54,28 @@ function addTask() {
 
         //trocando cor do texto para verde
         message.style.color = "#00ff40";
+        showMessage();
     }
     //limpando o input ao adicionar uma tarefa
     taskInput.value = "";
 }
 
-
+//função de adicionar tarefas pressionando a tecla enter
 function addTaskWithEnter(event) {
     if (event.key === "Enter") {
         addTask();
     }
+}
+
+//função de temporizador na exibição da mensagem de tarefa adicionada/erro
+let messageTimer;
+function showMessage() {
+    //limpando o timer
+    clearTimeout(messageTimer);
+    //exibindo a mensagem
+    message.style.display = "block";
+    //ocultando a mensagem após 5 segundos
+    messageTimer = setTimeout(() => {
+        message.style.display = "none";
+    }, 5000)
 }
