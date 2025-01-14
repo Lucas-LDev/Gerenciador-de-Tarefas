@@ -163,6 +163,7 @@ input {
 @media (max-width: 480px) {
   .container {
     margin-top: 20px;
+    width: 80%;
   }
 
   h1 {
