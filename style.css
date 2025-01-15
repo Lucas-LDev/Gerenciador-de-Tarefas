@@ -28,17 +28,17 @@ body {
   justify-content: center;
   font-family: 'Roboto Mono', monospace, Helvetica, sans-serif;
   background-color: var(--background);
+  min-height: 100vh;
 }
 
 .container {
+  flex-grow: 1;
   margin: 0 auto;
-  margin-top: 100px;
   width: 90%;
   max-width: 600px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   border-radius: 35px;
 }
 
@@ -46,8 +46,9 @@ h1 {
   text-align: center;
   word-wrap: break-word;
   font-size: 2.5rem;
-  color: var(--white-color);
   margin-bottom: 30px;
+  margin-top: 100px;
+  color: var(--white-color);
 }
 
 .add-tasks {
@@ -148,6 +149,55 @@ input {
   text-decoration: line-through;
 }
 
+/*estilização do footer*/
+footer {
+  width: 100%;
+  background-color: var(--box);
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.container-footer {
+  width: 60%;
+  margin: 0 auto;
+  padding: 10px;
+  color: var(--white-color);
+  text-align: center;
+}
+
+.p-top {
+  margin-top: 20px;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+strong {
+  color: var(--green-color);
+}
+
+.container-footer i {
+  font-size: 2rem;
+  color: var(--white-color);
+  margin-bottom: 20px;
+}
+
+.container-footer i:hover {
+  color: var(--green-color);
+}
+
+.attribution {
+  font-size: 0.875rem;
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+.attribution a {
+  text-decoration: none;
+  color: var(--white-color);
+}
+
 /*responsividade*/
 @media (max-width: 768px) {
   .container {
@@ -184,5 +234,13 @@ input {
     width: 30px;
     margin-right: 10px;
     border-radius: 4px;
+  }
+
+  .container-footer {
+    width: 90%;
+  }
+
+  .container-footer p {
+    text-align: justify;
   }
 }
