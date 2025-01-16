@@ -3,7 +3,7 @@
 Este projeto é um gerenciador de tarefas web criado para permitir que você adicione, marque como concluídas ou exclua tarefas da sua lista. As tarefas são salvas localmente no navegador, garantindo que permaneçam disponíveis mesmo após fechar a página.
 
 ## 🌐 Acesse a versão online
-👉 [Visite meu Gerenciador de Tarefas online](https://lucas-ldev.github.io/)
+👉 [Visite meu Gerenciador de Tarefas online](https://lucas-ldev.github.io/to-do-list-web/)
 
 ## 🚀 Tecnologias utilizadas
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) 
