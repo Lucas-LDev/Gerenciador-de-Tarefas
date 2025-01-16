@@ -115,7 +115,7 @@ input {
   flex: 2;
   font-size: 1.125rem;
   margin: 0 20px;
-  word-break: break-all;
+  word-break: break-word;
 }
 
 .btn-complete, .btn-remove {
